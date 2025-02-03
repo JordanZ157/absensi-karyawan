@@ -10,7 +10,7 @@
 
     <main class="form-signin w-100 m-auto">
         <form method="POST" action="{{ route('auth.login') }}" id="login-form">
-            <h1 class="h3 mb-3 fw-normal">Silahkan masuk untuk absensi</h1>
+            <h1 class="h3 mb-3 fw-normal">Selamat Datang di Web Absensi PT.Lancarjaya</h1>
 
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInputEmail" name="email"
@@ -31,7 +31,7 @@
             </div>
 
             <button class="w-100 btn btn-primary" type="submit" id="login-form-button">Masuk</button>
-            <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+            <p class="mt-5 mb-3 text-muted">&copy; JordanZ 2025</p>
         </form>
     </main>
 
