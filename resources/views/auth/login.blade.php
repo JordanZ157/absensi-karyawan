@@ -10,7 +10,7 @@
 
     <main class="form-signin w-100 m-auto">
         <form method="POST" action="{{ route('auth.login') }}" id="login-form">
-            <h1 class="h3 mb-3 fw-normal">Selamat Datang di Web Absensi PT.Lancarjaya</h1>
+            <h1 class="h3 mb-3 fw-normal">Selamat Datang di Web Absensi TIF 25</h1>
 
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInputEmail" name="email"

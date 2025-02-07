@@ -23,11 +23,33 @@
     </div>
     @endif
 
-    {{-- jika absen pulang sudah dimulai, dan karyawan sudah absen masuk dan belum absen pulang --}}
+    {{-- Jika absen pulang sudah dimulai, karyawan sudah absen masuk, dan belum absen pulang --}}
     @if ($attendance->data->is_end && $data['is_has_enter_today'] && $data['is_not_out_yet'])
-    <button class="btn btn-primary px-3 py-2 btn-sm fw-bold d-block w-100" wire:click="sendOutPresence"
-        wire:loading.attr="disabled" wire:target="sendOutPresence">Pulang</button>
+
+    {{-- Pilih Aktivitas --}}
+    <div class="mb-2">
+        <label for="activity" class="fw-bold">Pilih Aktivitas Hari Ini:</label>
+        <select wire:model="selectedActivity" id="activity" class="form-control">
+            <option value="">-- Pilih Aktivitas --</option>
+            <option value="Meeting">Meeting</option>
+            <option value="Coding">Coding</option>
+            <option value="Testing">Testing</option>
+            <option value="Dokumentasi">Dokumentasi</option>
+        </select>
+    </div>
+
+    {{-- Tombol Pulang, hanya aktif jika aktivitas sudah dipilih --}}
+    <button class="btn btn-primary px-3 py-2 btn-sm fw-bold d-block w-100"
+        wire:click="sendOutPresence"
+        wire:loading.attr="disabled"
+        wire:target="sendOutPresence"
+        @if (!$selectedActivity) disabled @endif> {{-- Tombol tidak aktif jika belum memilih aktivitas --}}
+        Pulang
+    </button>
+
     @endif
+
+
 
     {{-- sudah absen masuk dan absen pulang --}}
     @if ($data['is_has_enter_today'] && !$data['is_not_out_yet'])
