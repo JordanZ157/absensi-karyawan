@@ -10,11 +10,14 @@
             </div>
             <div class="mb-3">
                 <x-form-label id="description" label='Keterangan Izin (Alasan Lebih Lengkap)' />
-                <textarea id="description" name="description" class="form-control"
-                    wire:model.defer="permission.description"></textarea>
+                <select id="description" name="description" class="form-control" wire:model.defer="permission.description">
+                    <option value="">-- Pilih Keterangan Izin --</option>
+                    <option value="Cuti">Cuti</option>
+                    <option value="Datang Terlambat">Datang Terlambat</option>
+                    <option value="Pulang Cepat">Pulang Cepat</option>
+                </select>
                 <x-form-error key="permission.description" />
             </div>
-
         </div>
 
         <div class="d-flex justify-content-between align-items-center mb-5">
