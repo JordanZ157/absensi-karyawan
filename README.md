@@ -1,4 +1,4 @@
-# **Absensi App**
+# **Absensi Karyawan**
 
 Features
 
@@ -8,6 +8,8 @@ Features
 -   CRUD Attendances (Can have multiple attendances and can using only button or presence using QRCode)
 -   Using Datatables (Powergrid livewire)
 -   Can Export to Excel and CSV
+-   Daily Report
+-   Permission (Izin Cuti, Datang Terlambat dan Pulang Cepat)
 -   and more...
 
 ## Cara Install di Local
@@ -15,11 +17,11 @@ Features
 -   Hal yang harus dipersiapkan
     -   git
     -   composer
-    -   php v8.1
+    -   php v8.2
 
 ```sh
 # clone terlebih dahulu lewat cli (cmd, bash, atau yg lain)
-git clone https://github.com/muhammadpauzi/absensi-app.git
+git clone https://github.com/JordanZ157/absensi-karyawan.git
 
 # masuk ke foldernya
 cd absensi-app
@@ -48,7 +50,7 @@ php artisan serve
 -   Clone this repository
 
 ```sh
-git clone https://github.com/muhammadpauzi/absensi-app.git
+git clone https://github.com/JordanZ157/absensi-karyawan.git
 # make sure you are in the folder
 cd absensi-app
 ```
